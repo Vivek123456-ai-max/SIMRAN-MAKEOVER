@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: var(--font-outfit), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #062e26;
+  color: #f4eae0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -20px) scale(1.05);
+  }
+}
+
+.animate-drift {
+  animation: drift 20s infinite ease-in-out;
+}
+
+.animate-drift-reverse {
+  animation: drift 24s infinite ease-in-out reverse;
+}
+
+/* Premium utilities matching Simran Makeover */
+.glass-panel {
+  background: rgba(10, 58, 48, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(12, 68, 56, 0.9);
+  border-color: rgba(212, 175, 55, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(212, 175, 55, 0.1);
+}
+
+/* Premium Animations */
+@keyframes goldPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(223, 186, 115, 0.2), 0 0 20px rgba(223, 186, 115, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(223, 186, 115, 0.6), 0 0 30px rgba(223, 186, 115, 0.3);
+  }
+}
+
+.glow-text-gold {
+  animation: goldPulse 4s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float 4s infinite ease-in-out;
+}
+
+@keyframes luxuryZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-luxury-zoom {
+  animation: luxuryZoom 25s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 150ms; }
+.delay-200 { animation-delay: 300ms; }
+.delay-300 { animation-delay: 450ms; }
+
+/* Shimmer Button shine sweep */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0.3) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 3.5s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.glow-button-burgundy {
+  background: linear-gradient(135deg, #b7536d 0%, #cc667b 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px -2px rgba(183, 83, 109, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glow-button-burgundy:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 24px 2px rgba(183, 83, 109, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Custom scrollbar matching green/gold theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #062e26;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0a3a30;
+  border-radius: 4px;
+  border: 2px solid #062e26;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dfba73;
+}
+
+/* Global input focus transition and glow */
+input, textarea, select {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 15px rgba(223, 186, 115, 0.15) !important;
+  border-color: #dfba73 !important;
+  background-color: rgba(4, 32, 26, 0.8) !important;
+  outline: none !important;
+}
