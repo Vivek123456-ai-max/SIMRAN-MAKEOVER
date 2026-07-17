@@ -1,0 +1,474 @@
+Tech Stack
+Frontend
+Next.js 15
+React 19
+TypeScript
+Tailwind CSS
+Framer Motion
+GSAP
+Shadcn UI
+Backend
+Supabase
+Services
+PostgreSQL
+Auth
+Storage
+Edge Functions
+Realtime
+Row Level Security
+Deployment
+Vercel
+User Roles
+Guest
+Can
+View Website
+View Services
+Contact
+Gallery
+About
+Cannot
+Book
+View Dashboard
+Customer
+Can
+Login
+Book Appointment
+Cancel Appointment
+Edit Profile
+Booking History
+Cannot
+Edit Services
+Access Admin
+Receptionist (Future)
+Can
+Manage
+Today's bookings
+Customers
+Check-in
+Cannot
+Delete data
+Manage admins
+Admin
+Full Access
+Website Pages
+Landing
+About
+Services
+Gallery
+Reviews
+Book Appointment
+Contact
+Privacy Policy
+Terms
+Refund Policy
+Login
+Register
+Forgot Password
+Dashboard
+Admin
+404
+Maintenance
+Home Page Sections
+Hero
+Why Choose Us
+Featured Services
+Gallery Preview
+Testimonials
+Instagram Feed
+FAQ
+Contact CTA
+Footer
+Service Categories
+Bridal Makeup
+Party Makeup
+Reception Makeup
+Engagement Makeup
+Hair Styling
+Hair Spa
+Hair Care
+Skin Care
+Facial
+Cleanup
+Mehndi
+Nail Art
+Saree Draping
+HD Makeup
+Airbrush Makeup
+Pre Bridal
+Booking Flow
+User
+↓
+Select Service
+↓
+Choose Date
+↓
+Choose Time Slot
+↓
+Enter Details
+↓
+Submit
+↓
+Pending
+↓
+Admin Approval
+↓
+Confirmed
+↓
+Completed
+Booking Status
+Pending
+Confirmed
+Rejected
+Cancelled
+Completed
+No Show
+Rescheduled
+Database Design
+Supabase PostgreSQL
+users
+id UUID
+
+name
+
+email
+
+phone
+
+avatar
+
+role
+
+created_at
+
+updated_at
+profiles
+id
+
+gender
+
+dob
+
+address
+
+city
+
+state
+
+country
+
+pincode
+
+instagram
+
+notes
+services
+id
+
+name
+
+slug
+
+description
+
+image
+
+duration
+
+active
+
+sort_order
+
+created_at
+bookings
+id
+
+booking_number
+
+customer_id
+
+service_id
+
+date
+
+time
+
+status
+
+note
+
+admin_note
+
+created_at
+
+updated_at
+gallery
+id
+
+title
+
+image
+
+category
+
+featured
+
+created_at
+testimonials
+id
+
+customer_name
+
+rating
+
+review
+
+image
+
+approved
+
+created_at
+contact_messages
+id
+
+name
+
+phone
+
+email
+
+message
+
+status
+
+created_at
+admins
+id
+
+user_id
+
+permissions
+
+created_at
+notifications
+id
+
+title
+
+message
+
+type
+
+user_id
+
+read
+
+created_at
+activity_logs
+id
+
+user_id
+
+action
+
+ip
+
+browser
+
+created_at
+settings
+key
+
+value
+Storage Buckets
+avatars
+gallery
+services
+banners
+logos
+documents
+Authentication
+Supabase Auth
+Email Password
+Google Login (Future)
+OTP Login (Future)
+Admin Dashboard
+Dashboard
+Bookings
+Customers
+Services
+Gallery
+Reviews
+Messages
+Analytics
+Settings
+Admins
+Logs
+Analytics
+Total Users
+Today's Users
+Monthly Users
+Total Bookings
+Today's Bookings
+Completed
+Cancelled
+Revenue (Future)
+Popular Service
+Booking Calendar
+Daily
+Weekly
+Monthly
+Timeline View
+Search
+Customer Name
+Phone
+Email
+Booking Number
+Service
+Status
+Filters
+Pending
+Confirmed
+Completed
+Cancelled
+Today's Booking
+This Week
+This Month
+Security
+Supabase Row Level Security
+JWT
+Role Based Access
+Rate Limiting
+CSRF
+XSS Protection
+SQL Injection Protection
+Audit Logs
+SEO
+Meta Tags
+Open Graph
+Twitter Cards
+Schema.org
+Robots
+Sitemap
+Canonical URL
+Performance
+SSR
+Image Optimization
+Lazy Loading
+Caching
+Code Splitting
+Prefetch
+Compression
+Future Features
+WhatsApp Booking
+SMS Reminder
+Email Reminder
+Online Payment
+Coupons
+Membership
+Referral
+Gift Cards
+Loyalty Points
+Inventory
+Employee Management
+Attendance
+Salary
+Expense Tracker
+Invoice Generator
+GST Billing
+POS
+Supabase Folder Structure
+auth/
+
+storage/
+
+migrations/
+
+seed/
+
+functions/
+
+policies/
+
+database/
+
+views/
+
+triggers/
+SQL Tables (Recommended)
+profiles
+
+services
+
+service_categories
+
+bookings
+
+booking_status
+
+gallery
+
+gallery_categories
+
+reviews
+
+contact_messages
+
+notifications
+
+activity_logs
+
+admins
+
+settings
+
+time_slots
+
+business_hours
+
+holidays
+
+banners
+
+faq
+API Modules
+Authentication
+
+Services
+
+Bookings
+
+Gallery
+
+Reviews
+
+Notifications
+
+Dashboard
+
+Analytics
+
+Settings
+
+Admin
+Recommended Project Structure
+app/
+
+components/
+
+features/
+
+hooks/
+
+lib/
+
+supabase/
+
+types/
+
+utils/
+
+constants/
+
+styles/
+
+public/
